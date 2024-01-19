@@ -1,0 +1,24 @@
+<div class="border-bottom row" style="margin-bottom: 16px; padding-bottom: 8px;">
+  <div class="col-9">
+      <h4 style="color: rgb(120,120,120); margin-bottom: 4px;">
+      {{project['project_name']}}
+    </h4>
+    <div>
+      <b>Location: </b> {{project['project_county']}}, {{project['project_state']}}
+    </div>
+    {% if 'project_acres' in project %}
+      <div>
+        <b>Raw Acres: </b> {{project['project_acres']}}
+      </div>
+    {% endif %}
+    <div>
+      <b>Description: </b> {{project['project_description']}}
+    </div>  
+    <div>
+      <b>Link: </b> {{project['project_link']}}
+    </div>
+  </div>
+  <div class="col-3">
+    <button type="button" class="btn btn-outline-primary">Details</button>
+  </div>
+</div>
