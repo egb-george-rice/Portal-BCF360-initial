@@ -1,12 +1,12 @@
 <div class="border-bottom row" style="margin-bottom: 16px; padding-bottom: 8px;">
   <div class="col-9">
       <h4 style="color: rgb(120,120,120); margin-bottom: 4px;">
-      {{project['project_name']}}
+      {{project['project_id']}}
     </h4>
     <div>
       <b>Location: </b> {{project['project_county']}}, {{project['project_state']}}
     </div>
-    {% if 'project_acres' in project %}
+    {% if project['project_acres'] in project %}
       <div>
         <b>Raw Acres: </b> {{project['project_acres']}}
       </div>
@@ -15,7 +15,7 @@
       <b>Description: </b> {{project['project_description']}}
     </div>  
     <div>
-      <b>Link: </b> {{project['project_link']}}
+      <b>Link: </b> {{project['project_image']}}
     </div>
   </div>
   <div class="col-3 padding-right: 16px">
