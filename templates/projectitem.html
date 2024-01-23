@@ -6,7 +6,7 @@
     <div>
       <b>Location: </b> {{project['project_county']}}, {{project['project_state']}}
     </div>
-    {% if project['project_acres'] in project %}
+    {% if 'project_acres' in project %}
       <div>
         <b>Raw Acres: </b> {{project['project_acres']}}
       </div>
