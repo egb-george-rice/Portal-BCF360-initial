@@ -11,8 +11,8 @@ engine = create_engine(my_secret, connect_args={
   })
 
 def load_projects_from_db():
-  with engine.connect() as conn:
-    result = conn.execute(text("select * from projects"))
+  with engine.connect() as connection:
+    result = connection.execute(text("select * from projects"))
     projects = []
     for row in result.all():
       projects.append(row)
