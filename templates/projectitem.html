@@ -6,11 +6,9 @@
     <div>
       <b>Location: </b> {{project['proj_county']}}, {{project['proj_state']}}
     </div>
-    {% if project['proj_acres'] in project %}
-      <div>
-        <b>Raw Acres: </b> {{project['proj_show_acres']}}
-      </div>
-    {% endif %}
+    <div>
+      <b>Raw Acres: </b> {{project['proj_show_acres']}}
+    </div>
     <div>
       <b>Type: </b> {{project['proj_type']}}
     </div>  
@@ -22,6 +20,6 @@
     </div>
   </div>
   <div class="col-3 padding-right: 16px">
-    <a class="btn btn-primary" href="mailto:info@brightcleanfuture.com?subject=Interest in the {{project['proj_category']}} project located in {{project['proj_county']}} County, {{project['proj_state']}}." ">Interested</a> 
+    <a class="btn btn-primary" href="mailto:info@brightcleanfuture.com?subject=Interest in the {{project['proj_type']}} project located in {{project['proj_county']}} County, {{project['proj_state']}}." ">Interested</a> 
   </div>
 </div>
