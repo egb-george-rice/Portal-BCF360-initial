@@ -1,27 +1,27 @@
 <div class="border-bottom row" style="margin-bottom: 16px; padding-bottom: 8px;">
   <div class="col-9">
       <h4 style="color: rgb(120,120,120); margin-bottom: 4px;">
-      {{project['project_id']}}
+      {{project['proj_id']}}
     </h4>
     <div>
-      <b>Location: </b> {{project['project_county']}}, {{project['project_state']}}
+      <b>Location: </b> {{project['proj_county']}}, {{project['proj_state']}}
     </div>
-    {% if project['project_acres'] in project %}
+    {% if project['proj_acres'] in project %}
       <div>
-        <b>Raw Acres: </b> {{project['project_acres']}}
+        <b>Raw Acres: </b> {{project['proj_show_acres']}}
       </div>
     {% endif %}
     <div>
-      <b>Type: </b> {{project['project_category']}}
+      <b>Type: </b> {{project['proj_type']}}
     </div>  
     <div>
-      <b>Description: </b> {{project['project_description']}}
+      <b>Description: </b> {{project['proj_description']}}
     </div>  
     <div>
-      <b>Link: </b> {{project['project_image']}}
+      <b>Link: </b> {{project['proj_image']}}
     </div>
   </div>
   <div class="col-3 padding-right: 16px">
-    <a class="btn btn-primary" href="mailto:info@brightcleanfuture.com?subject=Interest in the {{project['project_category']}} project located in {{project['project_county']}} County, {{project['project_state']}}." ">Interested</a> 
+    <a class="btn btn-primary" href="mailto:info@brightcleanfuture.com?subject=Interest in the {{project['proj_category']}} project located in {{project['proj_county']}} County, {{project['proj_state']}}." ">Interested</a> 
   </div>
 </div>
