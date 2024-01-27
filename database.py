@@ -19,3 +19,15 @@ def load_projects_from_db():
     for row in result_dict:
       projects.append(row)
     return projects
+    
+def load_project_from_db(id):
+  with engine.connect() as conn:
+    result = conn.execute(text("select * from proj24 where proj_id = :val"), {"val": id})
+    rows = result.fetchall()
+    if len(rows) == 0:
+      return None
+    else:
+      columns = result.keys()  
+      result_dict = [dict(zip(columns, row)) for row in rows]
+      return result_dict[0]
+    
