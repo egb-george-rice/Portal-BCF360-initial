@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 def hello_bcf():
   projects = load_projects_from_db()
-  return render_template("home.html", projects=projects, company='Bright Clean Future')
+  return render_template("home.html", projects=projects)
 
 @app.route("/api/projects")
 def list_projects():
