@@ -14,12 +14,12 @@ def login():
   return render_template("login.html", boolean=True)
 
 @app.route("/logout")
-def login():
+def logout():
   return "<p>Logout</p>"
 
-@app.route("/sign-in")
-def login():
-  return render_template("sign-in.html")
+@app.route("/sign-up")
+def signin():
+  return render_template("sign-up.html")
 
 @app.route("/api/projects")
 def list_projects():

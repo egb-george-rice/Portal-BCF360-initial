@@ -1,5 +1,7 @@
-{% extends "home.html" %} {% block title %}Sign-up{% endblock %}
-{% include bootstrap.html%}
+{% include 'bootstrap.html'%}
+{% include 'nav.html'%}
+{% include 'banner.html'%}
+
 {% block content %}
 
 <form method='POST'>
@@ -25,3 +27,5 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>  
 {% endblock %}
+
+{% include 'footer.html'%}
