@@ -1,5 +1,6 @@
-import sqlalchemy, os
+import sqlalchemy
 from sqlalchemy import create_engine, text
+import os
 
 my_secret = os.environ['DB_CONNECTION_STRING']
 
@@ -30,4 +31,9 @@ def load_project_from_db(id):
       columns = result.keys()  
       result_dict = [dict(zip(columns, row)) for row in rows]
       return result_dict[0]
-    
+
+
+def add_interest_to_db(proj_id, project):  
+  with engine.connect() as conn:
+    query = text("INSERT INTO DevInterest (proj_id, DevUserID, full_name, proj_county, proj_state) VALUES (:proj_id, :DevUserID, :full_name, :proj_county, :proj_state)")
+    conn.execute(query, {"proj_id": proj_id, "DevUserID": proj_id, "full_name": proj_id, "proj_county": project['proj_county'], "proj_state": project['proj_state']})

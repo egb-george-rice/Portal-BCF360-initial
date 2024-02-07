@@ -10,11 +10,12 @@
   <div class="container">
     <h1 class="text-center mt-4 mb-2">BCF360 Portal</h1>
     <h3>Description</h3>
-  <p class='lead mt=0'>{{project.proj_description}}</p>
+  <p class='lead mt=0'>{{project.proj_description}}<br>
+  Overall suitability score: [[  ]]</p>
     <ul>
-      <li>Item 1</li>
-      <li>Item 2 </li>
-      <li>Item 3</li>
+      <li>Slope: </li>
+      <li>Current land use: </li>
+      <li>100-yr floodplain: </li>
     </ul>
       <h4>Type</h4>
   <p>{{project.proj_type}}</p>
@@ -22,9 +23,12 @@
   <p>{{project.proj_county}}, {{project.proj_state}}</p>
     <h4>Available Acres</h4>
   <p>{{project.proj_show_acres}}</p>
-  </div>
   
-
+  <div class="col-3 padding-right: 16px">
+    <a href="/projects/{{project['proj_id']}}/interest" type='button' class="btn btn-primary">Interested? Request info.</a> <br><br>
+    <a href="/projects/{{project['proj_id']}}/add_watch" type='button' class="btn btn-primary">Add to my watchlist.</a> 
+  </div>
+  </div>
   {% include 'footer.html' %} 
 </body>
 </html>
